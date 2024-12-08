@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SITE TITLE -->
     <title>Travel Website Landing Page | Responsive Design | Background Video Slider | Areeb Sheikh</title>
-    <!-- CSS -->
+
+    <!-- CSS FILE LINK -->
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <!-- HEADER STARTS -->
     <header>
         <a href="#" class="brand">Travel</a>
         <div class="menu-btn">
@@ -26,12 +31,20 @@
             </div>
         </div>
     </header>    
+    <!-- HEADER ENDS -->
+
+    <!-- HOME SECTION STARTS -->
     <section class="home">
+
+        <!-- BG VIDEO SLIDES -->
         <video class="video-slide active" src="dist/video-1.mp4" autoplay muted loop></video>
         <video class="video-slide" src="dist/video-2.mp4" autoplay muted loop></video>
         <video class="video-slide" src="dist/video-3.mp4" autoplay muted loop></video>
         <video class="video-slide" src="dist/video-4.mp4" autoplay muted loop></video>
         <video class="video-slide" src="dist/video-5.mp4" autoplay muted loop></video>
+        <!-- BG VIDEO SLIDES -->
+
+        <!-- HOME CONTENT TEXT -->
         <div class="content active">
             <h1>Wonderful.<br/><span>Island</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo dolores reprehenderit eius tenetur veniam, exercitationem porro aliquid eum accusantium quo eaque nulla ipsam fuga voluptatibus deserunt officiis perspiciatis ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo dolores reprehenderit eius tenetur veniam, exercitationem porro aliquid eum accusantium quo eaque nulla ipsam fuga voluptatibus deserunt officiis perspiciatis ea?</p>
@@ -57,11 +70,17 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo dolores reprehenderit eius tenetur veniam, exercitationem porro aliquid eum accusantium quo eaque nulla ipsam fuga voluptatibus deserunt officiis perspiciatis ea? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo dolores reprehenderit eius tenetur veniam, exercitationem porro aliquid eum accusantium quo eaque nulla ipsam fuga voluptatibus deserunt officiis perspiciatis ea?</p>
             <a href="#">Read More</a>
         </div>
+        <!-- HOME CONTENT TEXT -->
+
+        <!-- MEDIA ICONS -->
         <div class="media-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
+        <!-- MEDIA ICONS -->
+
+        <!-- SLIDE NAVIGATOR -->
         <div class="slider-navigation">
             <div class="nav-btn active"></div>
             <div class="nav-btn"></div>
@@ -69,44 +88,12 @@
             <div class="nav-btn"></div>
             <div class="nav-btn"></div>
         </div>
+        <!-- SLIDE NAVIGATOR -->
+         
     </section>
+    <!-- HOME SECTION ENDS -->
 
-
-    <script type="text/javascript">
-        // javascript of responsive navigation menu
-        const menuBtn = document.querySelector(".menu-btn");
-        const navigation = document.querySelector(".navigation");
-
-        menuBtn.addEventListener("click", () => {
-            menuBtn.classList.toggle("active");
-            navigation.classList.toggle("active");
-        });
-
-        // javascript for video slider
-        const btns = document.querySelectorAll(".nav-btn");
-        const slides = document.querySelectorAll(".video-slide");
-        const contents = document.querySelectorAll(".content");
-
-        var sliderNav = function (manual) {
-            btns.forEach((btn) => {
-                btn.classList.remove("active");
-            });
-            slides.forEach((slide) => {
-                slide.classList.remove("active");
-            });
-            contents.forEach((content) => {
-                content.classList.remove("active");
-            });
-            btns[manual].classList.add("active");
-            slides[manual].classList.add("active");
-            contents[manual].classList.add("active");
-        };
-
-        btns.forEach((btn, i) => {
-            btn.addEventListener("click", () => {
-                sliderNav(i);
-            });
-        });
-    </script>
+    <!-- JAVASCRIPT FILE LINK -->
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
